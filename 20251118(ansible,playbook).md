@@ -19,8 +19,8 @@ vi /etc/ansible/hosts<br/>
 >192.168.111.144<br/>
 :wq<br/>
 
-ssh-keygen
-ssh-copy-id root@192.168.111.144
+ssh-keygen<br/>
+ssh-copy-id root@192.168.111.144<br/>
 >yes<br/>
 >[비밀번호]<br/>
 
@@ -35,7 +35,7 @@ ansible all -m ping
 ansible all -m user -a "name=4gl_user state=present"<br/>
 ansible all -m shell -a "tail -l /etc/passwd"<br/>
 ansible all -m dnf -a "name=nginx state=latest"<br/>
-anisble all -m service -a "name=nginx state=started"<br/>
+ansible all -m service -a "name=nginx state=started"<br/>
 ansible all -m shell -a "firewall-cmd --add-service=http<br/>
 ansible all -m firewalld -a "service=http permanent=yes immediate=yes state=enabled"
 
