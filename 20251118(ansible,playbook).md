@@ -88,18 +88,18 @@ vi nginx.yaml
 >    .- name: create index.html<br/>
 >      lineinfile: path=index.html line=my ansible web<br/>
 >
->    .- name: copy index.html to web root
->      copy: src=index.html dest=/usr/share/nginx/html
+>    .- name: copy index.html to web root<br/>
+>      copy: src=index.html dest=/usr/share/nginx/html<br/>
 >
->    .- name: open http firewall
->      firewalld:
->        service: http
->        permanent: yes
->        immediate: yes
->        state: enabled
+>    .- name: open http firewall<br/>
+>      firewalld:<br/>
+>        service: http<br/>
+>        permanent: yes<br/>
+>        immediate: yes<br/>
+>        state: enabled<br/>
 >
 
-ansible-playbook nginx.yaml --syntax-check
+ansible-playbook nginx.yaml --syntax-check<br/>
 
 
 
